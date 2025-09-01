@@ -7,7 +7,6 @@ const db = mysql.createConnection({
   database: "schooldb"   
 });
 
-
 db.connect((err) => {
   if (err) {
     console.error("Error connecting to MySQL: ", err);

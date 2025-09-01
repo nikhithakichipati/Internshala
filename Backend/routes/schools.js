@@ -6,8 +6,7 @@ const router = express.Router();
 router.post("/", (req, res) => {
   const { name, address, city, state, contact, image, email_id } = req.body;
 
-  const sql = `
-    INSERT INTO schools (name, address, city, state, contact, image, email_id) 
+  const sql = `INSERT INTO schools (name, address, city, state, contact, image, email_id) 
     VALUES (?, ?, ?, ?, ?, ?, ?)`;
 
   db.query(sql, [name, address, city, state, contact, image, email_id], (err, result) => {
